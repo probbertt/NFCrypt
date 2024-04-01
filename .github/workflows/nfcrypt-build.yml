@@ -21,6 +21,6 @@ jobs:
     - name: Publish Update with EAS Update
       run: eas update --branch main --non-interactive
       env:
-        EXPO_TOKEN: EAaSLhdeBRvAyDlIiRfpXBvADzAh7wBbLdIq9W7E
+        EXPO_TOKEN: 'EAaSLhdeBRvAyDlIiRfpXBvADzAh7wBbLdIq9W7E'
         CI: true
 
