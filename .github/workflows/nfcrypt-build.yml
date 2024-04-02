@@ -16,11 +16,7 @@ jobs:
         node-version: '18.15' # Or your specific Node.js version
     - name: Install Dependencies
       run: npm install
-    - name: Install EAS CLI
-      run: npm install -g eas-cli
-    - name: Publish Update with EAS Update
-      run: eas update --branch main --non-interactive --auto
-      env:
-        EXPO_TOKEN: EAaSLhdeBRvAyDlIiRfpXBvADzAh7wBbLdIq9W7E
-        CI: true
+    - name: Build Files
+      run: npm build
+      
 
