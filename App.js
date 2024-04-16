@@ -5,8 +5,10 @@ import ReadScreen from "./components/read_page";
 import WriteScreen from "./components/write_page";
 import CryptScreen from "./components/crypt_page";
 import { Ionicons } from "@expo/vector-icons"; // Import Ionicons or any other icon set
+import { AppRegistry } from "react-native";
 
 const Tab = createBottomTabNavigator();
+AppRegistry.registerComponent("NFCrypt", () => App);
 
 export default function App() {
   return (

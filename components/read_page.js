@@ -1,9 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import { View, StyleSheet, Animated, Text } from "react-native";
+import NfcManager, { NfcTech } from "react-native-nfc-manager";
 
 export default function ReadScreen() {
   const pulseAnim = useRef(new Animated.Value(1)).current;
   const [statusMessage, setStatusMessage] = useState("Ready to scan...");
+
+  // NfcManager.setEventListener(NfcTech.Ndef, (tag) => {
+  //   setStatusMessage("Tag found!");
+  //   console.log(tag);
+  //   NfcManager.unregisterTagEvent().catch((err) => console.warn(err));
+  // });
 
   const startPulse = () => {
     Animated.loop(
